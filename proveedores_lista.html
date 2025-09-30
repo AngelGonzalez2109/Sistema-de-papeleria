@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proveedores - Listado de Suministradores</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reutilizando estilos de lista y tabla */
+        .contenedor-lista { max-width: 1200px; margin: 40px auto; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px 8px; text-align: left; }
+        th { background-color: #17a2b8; color: white; text-transform: uppercase; font-size: 0.9em; } /* Turquesa para Proveedores */
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .btn-accion { padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 0.9em; margin-right: 5px; }
+        .btn-editar { background-color: #007bff; color: white; }
+        .btn-eliminar { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Listado de Proveedores</h1>
+    </header>
+
+    <div class="contenedor-lista">
+        <h2>Compañías Suministradoras de Productos</h2>
+        <p>
+            <a href="proveedores_formulario.html" class="btn-accion" style="background-color: #28a745; color: white;">➕ Agregar Nuevo Proveedor</a>
+            <a href="index.html" class="btn-accion" style="background-color: #6c757d; color: white;">← Volver al Menú</a>
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre Comercial</th>
+                    <th>Contacto Principal</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Estatus</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PR01</td>
+                    <td>Distribuidora PapelMax</td>
+                    <td>Laura García</td>
+                    <td>5512345678</td>
+                    <td>ventas@papelmax.com</td>
+                    <td><span style="color: green; font-weight: bold;">Activo</span></td>
+                    <td>
+                        <a href="proveedores_formulario.html?id=PR01" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PR02</td>
+                    <td>Lápices y Tintas S.A.</td>
+                    <td>Roberto López</td>
+                    <td>5587654321</td>
+                    <td>contacto@tintas.mx</td>
+                    <td><span style="color: green; font-weight: bold;">Activo</span></td>
+                    <td>
+                        <a href="proveedores_formulario.html?id=PR02" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PR03</td>
+                    <td>Distribuidor Global</td>
+                    <td>Martín Sosa</td>
+                    <td>5599887766</td>
+                    <td>ventas@global.com</td>
+                    <td><span style="color: red; font-weight: bold;">Suspendido</span></td>
+                    <td>
+                        <a href="proveedores_formulario.html?id=PR03" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

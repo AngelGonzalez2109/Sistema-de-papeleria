@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario - Listado y Reporte</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de listado */
+        .contenedor-lista {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Elimina doble borde */
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff; /* Color de encabezado primario */
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Cebra para facilitar lectura */
+        }
+        
+        .btn-accion {
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-right: 5px;
+        }
+        
+        .btn-editar {
+            background-color: #ffc107; 
+            color: #333;
+        }
+
+        .btn-eliminar {
+            background-color: #dc3545; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inventario de Productos (Stock)</h1>
+    </header>
+
+    <div class="contenedor-lista">
+        <p>
+            <a href="inventario_formulario.html" class="btn-accion" style="background-color: #28a745; color: white;">➕ Agregar Nuevo Producto</a>
+            <a href="index.html" class="btn-accion" style="background-color: #6c757d; color: white;">← Volver al Menú</a>
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre del Artículo</th>
+                    <th>Categoría</th>
+                    <th>Proveedor</th>
+                    <th>Stock</th>
+                    <th>Costo</th>
+                    <th>Precio Venta</th>
+                    <th>Estatus</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P101</td>
+                    <td>Bolígrafo Azul</td>
+                    <td>Escritura (C01)</td>
+                    <td>PapelMax (PR01)</td>
+                    <td>500</td>
+                    <td>$5.00</td>
+                    <td>$12.50</td>
+                    <td><span style="color: green; font-weight: bold;">Disponible</span></td>
+                    <td>
+                        <a href="inventario_formulario.html?id=P101" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P205</td>
+                    <td>Cuaderno Profesional</td>
+                    <td>Papelería (C02)</td>
+                    <td>Tintas S.A. (PR02)</td>
+                    <td>300</td>
+                    <td>$25.00</td>
+                    <td>$55.00</td>
+                    <td><span style="color: green; font-weight: bold;">Disponible</span></td>
+                    <td>
+                        <a href="inventario_formulario.html?id=P205" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P301</td>
+                    <td>Set de Acuarelas</td>
+                    <td>Material de Arte (C03)</td>
+                    <td>PapelMax (PR01)</td>
+                    <td>80</td>
+                    <td>$80.00</td>
+                    <td>$160.00</td>
+                    <td><span style="color: orange; font-weight: bold;">Bajo Stock</span></td>
+                    <td>
+                        <a href="inventario_formulario.html?id=P301" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

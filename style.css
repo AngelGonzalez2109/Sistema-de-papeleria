@@ -1,0 +1,79 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6; /* Gris muy claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #007bff; /* Azul primario */
+    color: white;
+    padding: 20px;
+    margin: -20px -20px 20px -20px; /* Expande la cabecera */
+    text-align: center;
+    border-bottom: 5px solid #0056b3;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    color: #007bff;
+}
+
+/* Estilos de los Cuadros (Grid) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cuadro {
+    display: block;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #333;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+/* Efecto al pasar el ratón */
+.cuadro:hover {
+    transform: translateY(-5px); /* Se levanta un poco */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+}
+
+.cuadro h3 {
+    margin-top: 0;
+    color: #007bff; /* Color azul para los títulos de Altas */
+    font-size: 1.5em;
+}
+
+/* Estilo específico para los reportes (para diferenciarlos visualmente) */
+.cuadro-secundario {
+    background-color: #e9ecef; /* Fondo ligeramente gris */
+}
+
+.cuadro-secundario h3 {
+    color: #28a745; /* Verde para los títulos de Reportes */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ccc, rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}

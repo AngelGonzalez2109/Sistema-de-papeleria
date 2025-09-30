@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Empleados - Dar de Alta Personal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contenedor-formulario { max-width: 600px; margin: 40px auto; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        form label { display: block; margin-top: 15px; margin-bottom: 5px; font-weight: bold; }
+        form input[type="text"], form input[type="email"], form input[type="date"], form select { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn-principal { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; margin-top: 20px; margin-right: 10px; }
+        .btn-secundario { background-color: #6c757d; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Altas: Empleados</h1>
+    </header>
+
+    <div class="contenedor-formulario">
+        <h2>Registrar Nuevo Empleado</h2>
+        <form action="empleados_lista.html" method="POST">
+            
+            <label for="clave">Clave del Empleado:</label>
+            <input type="text" id="clave" name="clave" placeholder="Ej: E004" required>
+
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Sofía Martínez" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@papeleria.com" required>
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">-- Seleccione --</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="O">Otro</option>
+            </select>
+
+            <label for="estatus">Estatus Laboral:</label>
+            <select id="estatus" name="estatus" required>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+            
+            <button type="submit" class="btn-principal">Guardar Empleado</button>
+            <a href="empleados_lista.html" class="btn-secundario">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

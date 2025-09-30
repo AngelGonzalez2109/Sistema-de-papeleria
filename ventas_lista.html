@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Ventas y Transacciones</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos generales para listas, reutilizados del inventario */
+        .contenedor-lista { max-width: 1200px; margin: 40px auto; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px 8px; text-align: left; }
+        th { background-color: #28a745; color: white; text-transform: uppercase; font-size: 0.9em; } /* Verde para Ventas */
+        tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* Estilos de la Gráfica Simulada */
+        .grafica-contenedor {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .barra-contenedor {
+            display: flex;
+            height: 150px;
+            align-items: flex-end;
+            border-left: 1px solid #999;
+            border-bottom: 1px solid #999;
+        }
+        .barra {
+            width: 20%;
+            background-color: #007bff;
+            margin: 0 5%;
+            position: relative;
+            text-align: center;
+            color: white;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .etiqueta {
+            position: absolute;
+            top: -20px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reporte de Ventas y Transacciones</h1>
+    </header>
+
+    <div class="contenedor-lista">
+        <h2>Gráfica de Ventas por Empleado (Simulada)</h2>
+        <div class="grafica-contenedor">
+            <div class="barra-contenedor">
+                <div class="barra" style="height: 70%; background-color: #28a745;">
+                    $180.00
+                    <span class="etiqueta">Juan (E001)</span>
+                </div>
+                <div class="barra" style="height: 40%;">
+                    $110.00
+                    <span class="etiqueta">Ana (E002)</span>
+                </div>
+                <div class="barra" style="height: 10%;">
+                    $0.00
+                    <span class="etiqueta">Carlos (E003)</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Detalle de Transacciones (Base de Datos)</h2>
+        <p>
+            <a href="index.html" class="btn-accion" style="background-color: #6c757d; color: white;">← Volver al Menú</a>
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket No.</th>
+                    <th>Fecha y Hora</th>
+                    <th>Producto Vendido</th>
+                    <th>Cantidad</th>
+                    <th>Total Venta</th>
+                    <th>Empleado (FK)</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>T-2025-0001</td>
+                    <td>2025-09-30 14:00</td>
+                    <td>P101 - Bolígrafo Azul</td>
+                    <td>5</td>
+                    <td>$62.50</td>
+                    <td>E001 - Juan Pérez</td>
+                    <td><span style="color: green; font-weight: bold;">Pagada</span></td>
+                </tr>
+                <tr>
+                    <td>T-2025-0002</td>
+                    <td>2025-09-30 14:15</td>
+                    <td>P205 - Cuaderno Profesional</td>
+                    <td>2</td>
+                    <td>$110.00</td>
+                    <td>E002 - Ana Torres</td>
+                    <td><span style="color: green; font-weight: bold;">Pagada</span></td>
+                </tr>
+                 <tr>
+                    <td>T-2025-0003</td>
+                    <td>2025-09-30 15:30</td>
+                    <td>P301 - Set de Acuarelas</td>
+                    <td>1</td>
+                    <td>$160.00</td>
+                    <td>E001 - Juan Pérez</td>
+                    <td><span style="color: red; font-weight: bold;">Cancelada</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

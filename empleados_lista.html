@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Empleados - Listado de Personal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reutilizando estilos de lista y tabla */
+        .contenedor-lista { max-width: 1200px; margin: 40px auto; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px 8px; text-align: left; }
+        th { background-color: #ffc107; color: #333; text-transform: uppercase; font-size: 0.9em; } /* Amarillo para Empleados */
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .btn-accion { padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 0.9em; margin-right: 5px; }
+        .btn-editar { background-color: #007bff; color: white; }
+        .btn-eliminar { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Listado de Personal (Empleados)</h1>
+    </header>
+
+    <div class="contenedor-lista">
+        <h2>Reporte de Empleados Activos e Inactivos</h2>
+        <p>
+            <a href="empleados_formulario.html" class="btn-accion" style="background-color: #28a745; color: white;">➕ Agregar Nuevo Empleado</a>
+            <a href="index.html" class="btn-accion" style="background-color: #6c757d; color: white;">← Volver al Menú</a>
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre Completo</th>
+                    <th>Correo Electrónico</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Estatus</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>E001</td>
+                    <td>Juan Pérez</td>
+                    <td>juan.p@r.com</td>
+                    <td>1995-03-15</td>
+                    <td><span style="color: green; font-weight: bold;">Activo</span></td>
+                    <td>
+                        <a href="empleados_formulario.html?id=E001" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E002</td>
+                    <td>Ana Torres</td>
+                    <td>ana.t@r.com</td>
+                    <td>2000-08-20</td>
+                    <td><span style="color: green; font-weight: bold;">Activo</span></td>
+                    <td>
+                        <a href="empleados_formulario.html?id=E002" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E003</td>
+                    <td>Carlos Ruiz</td>
+                    <td>carlos.r@r.com</td>
+                    <td>1989-11-01</td>
+                    <td><span style="color: red; font-weight: bold;">Inactivo</span></td>
+                    <td>
+                        <a href="empleados_formulario.html?id=E003" class="btn-accion btn-editar">Editar</a>
+                        <a href="#" class="btn-accion btn-eliminar">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
